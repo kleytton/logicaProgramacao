@@ -7,3 +7,9 @@ Use este método com o número 43.8. Registre a resposta no console.
 * 4 - Use a documentação do JavaScript para localizar um método no objeto integrado Number que verifica se um número é um número inteiro.
 Coloque o número 2017 entre parênteses do método e use console.log() para imprimir o resultado.
  */
+
+console.log(Math.random() *100)
+console.log(Math.floor(Math.random() *100) )
+console.log(Math.ceil(43.8))
+console.log(Math.floor(43.8))
+console.log(Number.isInteger(2017) );
