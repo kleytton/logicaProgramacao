@@ -40,30 +40,126 @@ function digaOi() {
 }
 
 digaOi()
+//const digaOi () => 'Oi mundo
 
 //2
-function possoVotar(idade) {
-    if (idade >= 18) {
-        return true
-    } else {
-        return false
-    }
-}
+const possoVotar = idade => idade >= 18 ? true : false
+// function possoVotar(idade) {
+//     if (idade >= 18) {
+//         return true
+//     } else {
+//         return false
+//     }
+// }
 
 console.log(possoVotar(5))
+console.log(possoVotar(19))
 
 //3
-function concordoDiscordo(opiniao1, opiniao2) {
-    if (opiniao1 === opiniao2) {
-        return 'Voces concordam'
-    } else {
-        return 'Voces discordam'
-    }
-
+const concordoDiscordo = (opiniao1, opiniao2) => {
+    return opiniao1 === opiniao2 ? 'Voces concordam' : 'Voces discordam'
 }
+
+// function concordoDiscordo(opiniao1, opiniao2) {
+//     if (opiniao1 === opiniao2) {
+//         return 'Voces concordam'
+//     } else {
+//         return 'Voces discordam'
+//     }
+
+// }
 
 console.log(concordoDiscordo('tenho fome', 'tenho fome'))
 console.log(concordoDiscordo('tenho fome', 'não tenho fome'))
+
+//4
+const faseDaVida = (idade) => {
+    if (idade < 0 || idade > 140) {
+        return 'Esta nao e uma idade valida'
+    }
+    if (idade >= 0 && idade <= 3) {
+        return 'Bebe'
+    }
+    if (idade >= 4 && idade <= 12) {
+        return 'crianca'
+    }
+    if (idade >= 13 && idade <= 19) {
+        return 'adolescente'
+    }
+    if (idade >= 20 && idade <= 64) {
+        return 'Adulto'
+    }
+    if (idade >= 65 && idade <= 140) {
+        return 'Idoso'
+    }
+}
+
+// function faseDaVida(idade) {
+//     if (idade >= 0 && idade <= 3) {
+//         return 'Bebe'
+//     }
+//     else if (idade >= 4 && idade <= 12) {
+//         return 'crianca'
+//     }
+//     else if (idade >= 13 && idade <= 19) {
+//         return 'adolescente'
+//     }
+//     else if (idade >= 20 && idade <= 64) {
+//         return 'adulto'
+//     }
+//     else if (idade >= 65 && idade <= 140) {
+//         return 'idoso'
+//     }
+//     else {
+//         return 'Esta nao e uma idade valida'
+//     }
+// }
+console.log(faseDaVida(14))
+
+//5
+// const checarNota = (nota) => {
+//     if (nota < 0 || nota > 100) {
+//         return true;
+//     }
+// }
+
+// const notaFinal = (n1,n2,n3) => {
+//     if (checarNota(n1) || checarNota(n2 || checarNota(n3))) {
+//         return 'Voce digitou uma nota invalida'
+//     }
+// }
+
+function notaFinal(n1, n2, n3) {
+    const media = (n1 + n2 + n3) / 3
+    if (media >= 0 && media <= 59) {
+        return 'f '
+    }
+    else if (media >= 60 && media <= 69) {
+        return 'd '
+    }
+    else if (media >= 70 && media <= 79) {
+        return 'c '
+    }
+    else if (media >= 80 && media <= 89) {
+        return 'b '
+    }
+    else if (media >= 90 && media <= 100) {
+        return 'a '
+    }
+    else {
+        return 'Voce digitou uma nota invalida'
+    }
+}
+
+console.log(notaFinal(100, 100, 258))
+
+//6
+
+function seApresente(patente, ultimoNome) {
+    return `${patente} ${ultimoNome} se apresentando para o servico!`
+}
+
+console.log(seApresente('patente', 'Kleytton'))
 
 
 
