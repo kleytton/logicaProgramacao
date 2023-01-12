@@ -32,7 +32,7 @@ secretMessage.unshift('Programming')
 console.log(secretMessage)
 
 //7
-secretMessage.splice(6, 3, 'Know')
+secretMessage.splice(secretMessage.indexOf('get'), 5, 'know')
 console.log(secretMessage)
 
 //8
