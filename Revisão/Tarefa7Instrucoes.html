@@ -1,0 +1,82 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <h1>A Língua das Baleias</h1>
+    <p>Aquela peculiaridade da personagem Dory de falar "baleiês" no filme "Procurando Nemo" não faz parte só da ficção.
+        Para isso, iremos desenvolver um tradutor de linguagem para "baleiês".
+    </p>
+    <!-- <video style="width: 100%;" controls>
+        <source src="Dory falando baleies - Procurando Nemo.mp4" type="video/mp4">
+        <p>Video do file Procurando Nemo, acesse <a href="https://youtu.be/UjWFVm1loPQ" target="_blank">aqui</a></p>
+      </video> -->
+    <p>Existem algumas regras simples para traduzir texto para linguagem de baleia:</p>
+    <ol>
+        <li>Não há consoantes. Apenas vogais.</li>
+        <li>Os u's e e's são muito longos, então devemos dobrá-los em nosso programa.</li>
+    </ol>
+
+    <p>
+        Depois de converter o texto para a linguagem das baleias, o resultado é cantado lentamente, como é costume no
+        oceano.
+    </p>
+    <p>
+        Para realizar essa tradução, podemos usar nosso conhecimento de loops. Vamos começar!
+    </p>
+    <br>
+    <ol>
+        <li>Crie uma variável chamada <code>input</code> que seja igual a qualquer frase que você desejar. Esta variável
+            conterá o texto que você deseja traduzir para “conversa de baleia”.</li>
+        <li>As baleias só falam com as vogais “a”, “e”, “i”, “o” e “u”. Usando essas letras minúsculas, crie um array
+            chamado <code>vogais</code>. Este array não será atualizado, portanto, certifique-se de escolher a
+            palavra-chave de declaração apropriada.
+            Observação: o uso desse array ficará mais claro nas etapas a seguir.</li>
+        <li>Crie uma variável chamada <code>resultArray</code> e defina-a igual a um array vazio: []. Isso servirá como
+            um local para armazenar as vogais da <code>string</code> input.</li>
+        <li>
+            Crie um loop para percorrer cada letra da variável <code>input</code>. Em uma etapa posterior, compararemos
+            cada letra com nosso array <code>vogais</code>.
+        <li>
+            Para verificar seu trabalho, exiba a posição numerada do iterador dentro do loop <code>for</code> e execute
+            seu código.
+            Isso deve contar o número de caracteres em sua string <code>input</code>.
+            <br>
+            Comente este código quando estiver pronto para seguir em frente.
+        </li>
+        <li>Crie um loop aninhado for dentro do loop que você acabou de escrever. Faça o loop interno iterar pelo array
+            <code>vogais</code> toda vez que o loop externo for executado.
+
+            Isso permitirá que você verifique cada letra de <code>input</code> com todos os elementos de
+            <code>vogais</code> durante cada iteração.</li>
+        <li>Para verificar seu trabalho, registre as posições do número do iterador dentro do loop <code>for</code>
+            interno e execute seu código.
+            Você deve ver repetidamente 0 a 4 porque <code>vogais</code> tem 5 elementos de comprimento.</li>
+        <li>Dentro do segundo loop for, escreva um bloco de código que compare cada letra de <code>input</code> com
+            todas as letras do array <code>vogais</code>.</li>
+        <li>Agora, em vez de apenas registrar as letras, adicione-as ao array de resultados.
+
+            Observação: Para verificar seu trabalho, use console.log() para imprimir seu arquivo <code>resultArray</code>. As letras
+            que você registrou no console na etapa 8 agora devem ser incluídas no seu arquivo <code>resultArray</code>.</li>
+        <li>As baleias dobram seus e's e os u's em sua língua.
+            Escreva uma instrução if que verifique se cada letra na inputstring é igual a 'e'. Nesse caso, use o .push()
+            método para adicionar input[i] ao arquivo <code>resultArray</code>.
+            <em>Nota: Esta instrução pertence antes do bloco for de loop interno dentro do loop for externo. Isso ocorre
+                porque você deseja executar essa verificação apenas uma vez para cada letra no arquivo input.</em>
+        </li>
+        <li>Em seguida, você deseja dobrar a letra u.</li>
+        <li>Na parte inferior do programa, registre-se <code>resultArray</code> no console.</li>
+        <li>Atualmente, <code>resultArray</code> gera um array de caracteres. Para produzir uma linguagem de baleia adequada, queremos capitalizar os elementos do array e colocá-los juntos como uma string.
+            Declare uma variável do tipo string <code>result</code> que junte <code>resultArray</code> em uma única string e coloque todas as suas letras em maiúsculas.
+        </li>
+        <li>Execute o programa e cante a saída em voz alta - você fala oficialmente baleiês!
+        </li>
+        
+    </ol>
+    <script src="Objects/This.js"></script>
+</body>
+
+</html>

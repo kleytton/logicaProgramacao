@@ -31,7 +31,7 @@ const alfabeto = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M
 //     contador++
 //  }
 
-
+//Nãso fazer;
 // for(let contador = 0; contador >= 0; contador++){
 //     console.log(alfabeto[contador])
 // }
