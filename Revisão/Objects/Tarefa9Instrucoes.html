@@ -1,0 +1,87 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../style.css">
+    <title>Tarefa 9</title>
+</head>
+
+<body>
+    <h1>Estatísticas da equipe</h1>
+    <p>Queremos criar, recuperar e adicionar informações sobre seu time favorito. Basquete, futebol, tênis ou pólo
+        aquático, você escolhe. É seu trabalho criar dados usando as estruturas de dados JavaScript à sua disposição:
+        arrays e objetos.
+
+        Depois de criarmos essas estruturas de dados neste projeto, sinta-se à vontade para desafiar a si mesmo e obter
+        insights delas. Por exemplo, você pode querer obter o número total de jogos que seu time jogou ou a pontuação
+        média de todos os jogos.
+    </p>
+    <figure>
+        <img src="https://www.estudokids.com.br/wp-content/uploads/2019/06/esportes-ingles.jpg" alt="">
+    </figure>
+    <ol>
+        <h3>Populando Dados</h3>
+        <li>Vamos fazer uma estrutura de dados para armazenar as informações sobre nossa equipe. Declare uma variável
+            <code>const</code> chamada team e defina-a como um objeto vazio.
+        </li>
+        <li>Nosso time tem jogadores e os jogos que eles jogaram. Vamos representar ambos adicionando duas propriedades
+            ao seu objeto de equipe. Adicione uma propriedade <code>_players</code> e uma propriedade
+            <code>_games</code> e inicialize ambas em arrays vazios.
+        </li>
+        <li>Em seguida, preencha o array <code>empty_players</code> com três jogadores. Cada jogador deve ser um objeto
+            contendo
+            três propriedades: <code>firstName</code>, <code>lastName</code> e <code>age</code>. Coloque cada jogador em
+            uma nova linha para evitar que a linha
+            fique muito longa.</li>
+        <li>Vamos fazer o mesmo para nosso <code>array _games</code>. Preencha o array vazio com três jogos. Cada jogo
+            deve ser um
+            objeto contendo três propriedades: <code>opponent</code>, <code>teamPoints</code>,
+            <code>opponentPoints</code>.
+        </li>
+        <br>
+        <h3>Obtendo Dados</h3>
+        <li>Crie um método <code>getter</code> chamado <code>players</code> para recuperar a propriedade
+            <code>_players</code>. Dentro do método <code>getter</code>, retorne a propriedade <code>_players</code>.
+            Para o escopo deste projeto, não precisaremos criar métodos <code>setter</code>, pois não queremos que
+            ninguém altere os
+            dados salvos nas propriedades.
+        </li>
+        <li>Crie outro método <code>getter</code> chamado <code>games</code> para recuperar a propriedade
+            <code>_games</code>. Dentro do método <code>getter</code>, retorne a propriedade <code>_games</code>.
+        </li>
+        <br>
+        <h3>Adicionando Dados</h3>
+        <li>Queremos adicionar um novo jogador ao nosso time. Adicione um método <code>.addPlayer()</code> ao objeto de
+            equipe. Esse
+            método deve receber três parâmetros: <code>newFirstName</code>, <code>newLastName</code> e
+            <code>newAge</code>.
+            Dentro do método, crie um objeto <code>player</code> definindo os três parâmetros para serem os valores das
+            três
+            propriedades do objeto: <code>firstName</code>, <code>lastName</code>, <code>age</code>. Por fim, adicione o
+            objeto ao <code>array</code> <code>_players</code> do
+            time.
+        </li>
+        <li>Abaixo do objeto de equipe, vamos experimentar nosso novo método <code>.addPlayer()</code> para adicionar um
+            novo jogador: <em>Pernalonga, 76 anos</em>.
+            Registre a propriedade <code>_players</code> do time para verificar se nosso novo jogador foi adicionado.
+        </li>
+        <li>Nosso estatístico tem algumas informações novas para nós! Crie um método para adicionar os resultados do
+            jogo chamado <code>addGame</code> que usa três parâmetros: <code>newOpponent</code>,
+            <code>newTeamPoints</code>, <code>newOpponentPoints</code>.
+
+            Dentro do método <code>.addGame()</code>, crie um objeto de jogo definindo os três parâmetros para serem os
+            valores das três propriedades do objeto: <code>opponent</code>, <code>teamPoints</code>,
+            <code>opponentPoints</code>. Adicione o objeto do jogo ao array <code>_games</code> do time.
+        </li>
+        <li>Finalmente, abaixo do nosso objeto de equipe, use o método <code>.addGame()</code> para adicionar um
+            registro de um novo jogo. A nossa equipe jogou contra os <em>'Titans'</em> onde somamos 100 pontos e o
+            adversário marcou 98 pontos.
+            Registre a propriedade <code>_games</code> do time para verificar se nosso novo registro de jogo foi
+            adicionado corretamente.</li>
+
+
+    </ol>
+    <script src="Tarefa9.js"></script>
+</body>
+
+</html>

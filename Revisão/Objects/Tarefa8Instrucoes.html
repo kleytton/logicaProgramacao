@@ -1,0 +1,87 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../style.css">
+    <title>Tarefa 8</title>
+</head>
+
+<body>
+    <h1>Fábrica de Refeições</h1>
+    <p>Um restaurante contratou você para criar uma função para o site dele que permite definir uma refeição e um preço
+        todas as manhãs para o Today's Special. Use seu conhecimento de getters e setters para garantir que qualquer
+        pessoa que use a nova função possa gerar uma refeição e um preço para o Especial do Dia sem nenhum erro
+        embaraçoso!
+    </p>
+    <figure>
+        <img src="https://media.istockphoto.com/id/1081422898/photo/pan-fried-duck.jpg?s=612x612&w=0&k=20&c=kzlrX7KJivvufQx9mLd-gMiMHR6lC2cgX009k9XO6VA="
+            alt="">
+    </figure>
+    <ol>
+        <h3>Create the Menu Object</h3>
+        <li>Manteremos a refeição, o preço e seus respectivos <code>getters</code> e <code>setters</code> em um objeto
+            chamado menu. Em app.js, crie um objeto de menu vazio.</li>
+        <li>O objeto de <code>menu</code> manterá a refeição e o preço do Especial de Hoje como propriedades e eles não
+            devem ser alterados diretamente.
+
+            Dentro do objeto de <code>menu</code>, crie uma propriedade <code>_meal</code> com o valor de uma string
+            vazia (<code>''</code> ). Isso acabará por manter o nome da refeição.</li>
+        <li>Em seguida, adicione uma propriedade <code>_price</code> com valor <code>0</code>. Isso eventualmente
+            manterá o preço da refeição e também não deve ser alterado diretamente.</li>
+        <li>Sabemos que as propriedades que começam com <code>_</code> não devem ser manipuladas diretamente. Mas apenas
+            para validar esse conhecimento, vamos testá-lo!
+            Abaixo do objeto de menu, manipule diretamente as duas propriedades atribuindo a <code>_meal</code> um valor
+            numérico e <code>_price</code> um valor de string.
+            Em seguida, abaixo das novas atribuições, <code>console.log()</code> o objeto de menu para ver como não
+            verificar esses valores pode causar confusão para um visitante do site!</li>
+        <br>
+        <h3>Adicionando Métodos Setter</h3>
+        <li>Para reatribuir com segurança as duas propriedades do menu, podemos adicionar <code>setters</code> que
+            verificam os valores que estão sendo atribuídos.
+            Abaixo das propriedades, use a palavra-chave <code>set</code> para criar um método <code>setter</code> de
+            refeição com <code>mealToCheck</code> como parâmetro. Deixe o corpo da função vazio por enquanto.</li>
+        <li>No corpo do método <code>setter</code>, crie uma instrução <code>if</code> que verifique se
+            <code>mealToCheck</code> é uma string. Se for, retorne a propriedade <code>_meal</code> do objeto com
+            <code>mealToCheck</code> atribuído como o valor.
+        </li>
+        <li>Usando os mesmos procedimentos acima, use uma palavra-chave definida para criar um <code>setter</code> de
+            preço com <code>priceToCheck</code> como parâmetro.
+            Esse método deve garantir que o valor associado a <code>_price</code> seja sempre um número.</li>
+        <li>Abaixo do objeto de menu, defina os valores de <code>_meal</code> e <code>_price</code> usando os métodos
+            <code>setter</code> recém-criados. Em seguida, <code>console.log()</code> no objeto de menu para verificar
+            sua funcionalidade.
+        </li>
+        <br>
+        <h3>Adicionando Método Getter</h3>
+        <li>Agora é hora de retornar com segurança os valores das propriedades <code>_meal</code> e <code>_price</code>
+            de forma legível.
+            Em vez de acessar diretamente as propriedades, podemos usar um método <code>getter</code> que verifica
+            proativamente se uma refeição
+            e o preço foram definidos corretamente, antes de retornar os valores.
+
+            Abaixo dos <code>setters</code>, use a palavra-chave <code>get</code> para criar um método
+            <code>todaysSpecial</code>.
+            Deixe o corpo da função vazio por enquanto.
+        </li>
+        <li>No corpo do <code>getter</code>, crie uma instrução <code>if…else</code> para verificar se os valores
+            <code>_meal</code> e <code>_price</code> existem (ou são valores verdadeiros). Em caso afirmativo, retorne
+            uma string informando aos possíveis visitantes do site qual é o Especial de hoje. Por exemplo: <em>“O
+                especial de hoje é espaguete por R$ 5!”</em>
+            Se os valores <code>_meal</code> e <code>_price</code> não existirem (ou forem falsos), retorne a string
+            <em>'Refeição ou
+                preço não foi definido corretamente!'</em>.
+        </li>
+        <h3>Get Especial do Dia</h3>
+        <li>Por fim, use o método <code>getter</code> para <code>console.log()</code> Especial do dia.
+            Supondo que você tenha usado o <code>setter</code> de refeição para atribuir uma string e o
+            <code>setter</code> de preço para atribuir um número na tarefa 8, você deverá ver o Especial de hoje
+            registrado no console.
+            Se você deseja estender seu aprendizado neste projeto, tente adicionar uma variedade de refeições e preços
+            para definir aleatoriamente e obter o Especial de hoje!</li>
+
+
+    </ol>
+    <script src="FindIndex.js"></script>
+</body>
+
+</html>
