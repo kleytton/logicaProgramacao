@@ -1,0 +1,139 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./../../style.css">
+    <title>Tarefa 10</title>
+</head>
+
+<body>
+    <h1>Verificador gramatical</h1>
+    <p>Neste projeto, você usará o que sabe sobre iteração em arrays para coletar informações e melhorar a qualidade de
+        um parágrafo.
+    </p>
+    <figure>
+        <img style="max-width: 100%;"
+            src="https://images.theconversation.com/files/45159/original/rptgtpxd-1396254731.jpg" alt="">
+    </figure>
+    <div>
+        <p>
+            Last weekend, I took literally the most beautifull bike ride of my life. The route is called "The 9W to
+            Nyack" and it stretches all the way from Riverside Park in Manhattan to South Nyack, New Jersey. It's
+            really an adventure from beginning to end! It is a 48 mile loop and it literally took me an entire day. I
+            stopped at Riverbank State Park to take some artsy photos. It was a short stop, though, because I had a
+            freaking long way to go. After a quick photo op at the very popular Little Red Lighthouse I began my trek
+            across the George Washington Bridge into New Jersey. The GW is a breathtaking 4,760 feet long! I was already
+            very tired by the time I got to the other side. An hour later, I reached Greenbrook Nature Sanctuary, an
+            extremely beautifull park along the coast of the Hudson. Something that was very surprising to me was that
+            near the end of the route you literally cross back into New York! At this point, you are very close to the
+            end.
+        </p>
+    </div>
+    <ol>
+        <h3>Início</h3>
+        <li>A variável <code>story</code> contém o parágrafo que iremos editar. Para editar a história, nós a transformamos em um
+            array na linha 3. O método <code>.split()</code> separa a string <code>história</code> pelo caractere de espaço
+            <code>(' ')</code>
+            e armazena cada palavra como um elemento do array.
+            Para ver o array com o qual trabalharemos ao longo da lição, registre <code>storyWords</code> no console.
+            Depois de visualizar o array <code>storyWords</code>, comente a instrução <code>console.log()</code> antes
+            de passar para a próxima tarefa.
+        </li>
+        <li>Para uma melhor comparação visual das histórias originais e editadas, queremos visualizar o array
+            <code>storyWords</code>
+            editado como uma string. Para alterar o array <code>storyWords</code> de volta para uma string legível,
+            podemos invocar o método <code>.join()</code> em <code>storyWords</code>.
+            Forneça ao método <code>.join()</code> um argumento de um caractere de espaço vazio <code>(' ')</code> para
+            separar cada elemento do array com um espaço na string.
+            Coloque a invocação do método <code>.join()</code> como um argumento de uma instrução
+            <code>console.log()</code> para registrar a história final no console.
+        </li>
+        <h3>Contando Palavras</h3>
+        <li>Agora é hora de começar a editar a história manipulando o array <code>storyWords</code>. Queremos poder ver
+            as alterações, portanto, certifique-se de que seu <code>console.log()</code> da história unida seja a última
+            linha de código em seu editor.
+
+            Primeiro, acima da instrução <code>console.log()</code> que usa o método <code>.join()</code>, crie uma
+            variável chamada <code>count</code> que armazena o número 0.
+
+            Diretamente abaixo de <code>count</code>, use um método <code>.forEach()</code> para iterar sobre o array
+            <code>storyWords</code>. Como argumento do método <code>forEach()</code>, crie uma função vazia para ser
+            usada como função de retorno de chamada(<em>callback function</em>).
+
+            Embora a sintaxe de seta, <em>arrow function</em> do ES6 seja recomendada para a função de retorno de chamada, sinta-se à vontade
+            para usar qualquer sintaxe com a qual se sinta confortável.
+        </li>
+        <li>Para cada palavra no array <code>storyWords</code>, queremos que a variável de contagem seja incrementada em
+            um.
+            Adicione um parâmetro chamado <code>word</code> à função de retorno de chamada do método
+            <code>.forEach()</code> a ser usado para armazenar o elemento atual ao iterar sobre o array
+            <code>storyWords</code>. Cada vez que <code>storyWord</code> itera, incrementa a contagem em um.
+            Abaixo do método <code>.forEach()</code>, registre a contagem para ver quantas palavras existem na história.
+        </li>
+        <h3>Filtrando Palavras</h3>
+        <li>Uma contagem de palavras de 181 é um pouco longa para esta história. Vamos filtrar todas as instâncias da
+            palavra "literally" para encurtar a história e remover a palavra desnecessária. Reatribuiremos a história
+            filtrada à mesma variável <code>storyWords</code> aplicando o método <code>.filter()</code>! Ao longo do
+            projeto, usaremos essa abordagem de reatribuir a variável <code>storyWords</code> para cada revisão da
+            história.
+            Abaixo de onde você registrou a variável <code>count</code>, reatribua a variável <code>storyWords</code>
+            para igualar a invocação do método <code>.filter()</code> no array <code>storyWords</code>. Forneça ao
+            método <code>.filter()</code> uma função de retorno de chamada com um parâmetro <code>word</code>.</li>
+
+        <li>Abaixo da declaração da variável <code>storyWords</code>, observe a variável <code>unnecessaryWord</code> na
+            linha 4. Queremos filtrar o valor de <code>unnecessaryWord</code> da história.
+            Dentro do corpo da função de retorno de chamada do método <code>filter()</code>, retorne <code>word</code>
+            somente se ela <strong>NÃO</strong> for igual a <code>unnecessaryWord</code>.
+            Verifique a string <code>history</code> no console para garantir que não inclua a palavra "literally". A
+            primeira instância de "literally" estava anteriormente na primeira frase.</li>
+        <h3>Substituindo palavras</h3>
+        <li>Agora que removemos as palavras desnecessárias, vamos cuidar de quaisquer palavras incorretas na história.
+            Podemos reatribuir <code>storyWords</code> a um novo array de palavras com verificação ortográfica usando o
+            método <code>.map()</code>!
+            Reatribua <code>storyWords</code> para igualar a invocação do método <code>.map()</code> no array
+            <code>storyWords</code>.
+            Defina a palavra como um parâmetro da função callback de <code>.map()</code>.
+            No corpo do callback, defina uma instrução condicional para verificar se o argumento da palavra é igual à
+            variável <code>mispelledWord</code>. Se for, retorne a grafia correta da string, “beautiful” que é "beautifull". Se não,
+            retorne <code>word</code>.
+            Dê uma olhada na string <code>story</code> no console para ver as grafias corretas! Você pode ver uma
+            ocorrência da palavra com verificação ortográfica na primeira frase da história.
+        </li>
+        <li>Uh oh, sua avó vai ler a história e tem uma palavra “ruim” nela! Vamos aplicar o método
+            <code>.findIndex()</code> a <code>storyWords</code> para encontrar o índice da palavra inválida.
+            Comece declarando uma variável chamada <code>badWordIndex</code> e definindo-a para a invocação de
+            <code>.findIndex()</code> no array <code>storyWords</code>.
+            A função callback <code>.findIndex()</code> deve verificar cada palavra para ver se ela é igual à variável
+            <code>badWord</code> declarada na linha 6 e retornar o índice da palavra encontrada.
+            Em seguida, registre <code>badWordIndex</code> no console.
+        </li>
+        <li>Agora que temos o índice da palavra ruim, podemos substituí-lo facilmente por algo mais apropriado.
+            Acesse o elemento dentro do array <code>storyWords</code> que possui o índice de <code>badWordIndex</code>
+            usando a notação de colchetes. Defina o elemento acessado igual à string mais apropriada, 'really'.
+            Salve o código e verifique se o palavrão foi substituído.</li>
+
+        <li>Por fim, vamos simplificar as palavras da história para atrair um público mais amplo. Podemos garantir que
+            cada palavra na história tenha 10 caracteres ou menos usando o método <code>.every()</code>. O método
+            <code>.every()</code> usa uma função de retorno de chamada para testar se cada elemento em uma matriz passa
+            por uma condição especificada. Retorna <code>true</code> se todos os elementos passarem, e
+            <code>false</code> se houver algum
+            elemento que não passe.
+            Para começar, defina uma variável chamada <code>lengthCheck</code> e configure-a para a invocação do método
+            <code>.every()</code> em
+            <code>storyWords</code>. Na função callback, teste se cada palavra tem menos ou igual a 10 caracteres.
+            Exiba <code>lengthCheck</code> no console para ver o resultado. Se <code>true</code> for registrado, cada
+            palavra na história terá
+            10 caracteres ou menos. Caso contrário, uma ou mais palavras terão mais de 10 caracteres.
+        </li>
+        <li>Hmm, parece que há pelo menos uma palavra com mais de 10 caracteres.
+            Use um método iterador de sua escolha para acessar a palavra (existe apenas uma) no array
+            <code>storyWords</code> com mais de 10 caracteres.
+            Em seguida, substitua manualmente a palavra na sequência da história original por uma palavra mais curta.
+            Algumas ideias de palavras substitutas que podem ser usadas são: "stunning", "dazzling" ou "glorious".
+        </li>
+
+    </ol>
+    <script src="Tarefa10.js"></script>
+</body>
+
+</html>
